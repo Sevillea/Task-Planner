@@ -34,5 +34,22 @@ var now = parseInt(moment().format("H"));
 
 // Function for past present future timeblock:
 
+$.each(timeBlock, function (i, time) {
+    var timeId = parseInt($(this).attr("id"));
+    if (timeId === now) {
+      $(this).next().addClass("present"); 
+    } else if (timeId > now) {
+      $(this).next().addClass("future");
+    } else if (timeId < now) {
+        $(this).next().addClass("past");
+  });
+
+  // Eventlistener for save buttons when user clicks 'save'.
+
+  $(".saveButton").on("click", function (saveBtn) {
+    var calendarItem =
+      saveBtn.target.parentElement.previousElementSibling.children[0].value;
+    localStorage.setItem(saveBtn.target.attributes[0].value, calendarItem);
+  });
 
 
