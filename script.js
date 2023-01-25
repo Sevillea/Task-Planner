@@ -44,14 +44,29 @@ $.each(timeBlock, function (i, time) {
       $(this).next().addClass("future");
     } else if (timeId < now) {
         $(this).next().addClass("past");
-  });
+  }});
 
   // Eventlistener for save buttons when user clicks 'save'.
 
   $(".saveButton").on("click", function (saveBtn) {
     var calendarItem =
       saveBtn.target.parentElement.previousElementSibling.children[0].value;
+
+  // Commit to local storage
     localStorage.setItem(saveBtn.target.attributes[0].value, calendarItem);
   });
 
 // FOR loops OR IF statement ??? 
+
+
+$(document).ready(function(){
+
+  if(localStorage["9AM"] !== null && localStorage !== undefined)
+  var nineAM = $("<p>" + localStorage["9AM"] + "</p>");
+  $("nineAM").append(nineAM[0].text);
+}
+
+else {
+  ("No Task for Today");
+})
+
