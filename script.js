@@ -46,11 +46,19 @@ $.each(timeBlock, function (i, time) {
         $(this).next().addClass("past");
   }});
 
+  // Event listener to clear contents of schedule:
+  $(".clear-CalBtn").on("click", function (event) {
+    event.preventDefault;
+    $("text-area").val("");
+    localStorage.clear;
+  });
+
   // Eventlistener for save buttons when user clicks 'save'.
 
   $(".saveButton").on("click", function (saveBtn) {
     var calendarItem =
       saveBtn.target.parentElement.previousElementSibling.children[0].value;
+
 
   // Commit to local storage
     localStorage.setItem(saveBtn.target.attributes[0].value, calendarItem);
