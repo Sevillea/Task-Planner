@@ -5,7 +5,6 @@ body {
 }
 
 
-
 textarea {
   background: transparent;
   border: none;
@@ -59,6 +58,8 @@ textarea {
   color: white;
 }
 
+/* save button  */
+
 .saveBtn {
   border-left: 1px solid black;
   border-top-right-radius: 15px;
@@ -70,4 +71,35 @@ textarea {
 .saveBtn i:hover {
   font-size: 20px;
   transition: all 0.3s ease-in-out;
+}
+
+.btn-secondary {
+  background-color: black; 
+  border: none;
+  border-radius: 8px;
+  color: white;
+  /* padding: 9px 30px; */
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  width: 100px;
+  height: 30px;
+}
+
+#clear-cal {
+  background-color: black; 
+  border: none;
+  border-radius: 8px;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  width: 100px;
+  height: 30px;
+}
+
+.time {
+  font-size: 50px;
 }
