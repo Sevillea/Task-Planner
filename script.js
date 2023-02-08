@@ -53,18 +53,7 @@ var saveBtn = $(".btn-secondary");
 //     } else if (timeId < now) {
 //         $(this).next().addClass("past");
 //   }});
-
-// //   
-
-// //   // Eventlistener for save buttons when user clicks 'save'.
-
-//   $(".btn-secondary").on("click", function(saveBtn) {
-//     var calendarItem =
-//       saveBtn.target.parentElement.previousElementSibling.children[0].value;
-//       // Commit to local storage
-//       localStorage.setItem(saveBtn.target.attributes[0].value, textArea);
-//   });
-
+//  
 //   // 
 //   $(window).load(function () {
 //     if (localStorage["9am"] !== null && localStorage["9am"] !== undefined) {
@@ -75,7 +64,7 @@ var saveBtn = $(".btn-secondary");
 //     }
 //   });
 
-//MOMENT JS for date & Time: Present
+//MOMENT JS for current date & time
 $(document).ready(function(){
   var timeNow = moment().format("MMMM Do YYYY");
   var displayDate = document.getElementById("currentDay");
@@ -90,7 +79,7 @@ $(document).ready(function(){
     localStorage.clear();
   });
 
-  // Time slot vs current date & Time. 
+  // Calendar time slot compared with current date & Time. 
 
   $(".time").each(function (){
     var timeNow = $(this).attr("id").split("-")[1]
@@ -110,5 +99,18 @@ $(document).ready(function(){
 
 ;})
 
+ // Eventlistener for save buttons when user clicks 'save'.
+
+  // $(".btn-secondary").on("click", function(saveBtn) {
+    
+
+  $(".btn-secondary").click(function(event){
+    event.preventDefault();
+    var calendarItem =
+      saveBtn.target.parentElement.previousElementSibling.children[0].value;
+      // Commit to local storage
+      localStorage.setItem(saveBtn.target.attributes[0].value, textArea);
+  });
+    
 
 
