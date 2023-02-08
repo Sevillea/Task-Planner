@@ -24,58 +24,91 @@
 
 // I'll want to tailor my Bootstrap code to make the app more personable. ....
 
-
-
 // Variable for current time and date (Top of page)
-var timeNow = moment().format("MMMM Do YYYY");
-$("#currentDay").text(timeNow)
 
-// Variable for timeblocks. 
-var timeBlock = $(".hour");
-var now = parseInt(moment().format("H"));
 
-// Function for past present and future timeblock:
 
-$.each(timeBlock, function (i, time) {
-    var timeId = parseInt($(this).attr("id"));
-    if (timeId === now) {
-      $(this).next().addClass("present"); 
-    } else if (timeId > now) {
-      $(this).next().addClass("future");
-    } else if (timeId < now) {
-        $(this).next().addClass("past");
-  }});
 
-  // Event listener to clear contents of schedule:
-  $(".clear-CalBtn").on("click", function(event) {
+// jQuery Selectors:
+var clearBtn = $("#clear-cal");
+var timeBlock = $(".time");
+var textArea = $(".planner-item");
+var saveBtn = $(".btn-secondary");
+
+
+// // Moment JS declarations (hour):
+// var now = parseInt(moment).format("HH");
+// var timeBlock = $(".hour");
+
+
+
+// // // Function for past present and future timeblock:
+
+// $.each(timeBlock, function (i, time) {
+//     var timeId = parseInt($(this).attr("id"));
+//     if (timeId === now) {
+//       $(this).next().addClass("present"); 
+//     } else if (timeId > now) {
+//       $(this).next().addClass("future");
+//     } else if (timeId < now) {
+//         $(this).next().addClass("past");
+//   }});
+
+// //   
+
+// //   // Eventlistener for save buttons when user clicks 'save'.
+
+//   $(".btn-secondary").on("click", function(saveBtn) {
+//     var calendarItem =
+//       saveBtn.target.parentElement.previousElementSibling.children[0].value;
+//       // Commit to local storage
+//       localStorage.setItem(saveBtn.target.attributes[0].value, textArea);
+//   });
+
+//   // 
+//   $(window).load(function () {
+//     if (localStorage["9am"] !== null && localStorage["9am"] !== undefined) {
+//       var nineAm = $("<p>" + localStorage.setItem["planner-item"] + "</p>");
+//       $("#nineAm").append(nineAm[0].innerText);
+//     } else {
+//       ("");
+//     }
+//   });
+
+//MOMENT JS for date & Time: Present
+$(document).ready(function(){
+  var timeNow = moment().format("MMMM Do YYYY");
+  var displayDate = document.getElementById("currentDay");
+  displayDate.innerHTML = timeBlock;
+  var currentHour = moment().format("HH");
+})
+
+// Event listener to clear contents of schedule:
+  $(".clear-CalBtn").click(function(event) {
     event.preventDefault;
     $("text-area").val("");
-    localStorage.clear;
+    localStorage.clear();
   });
 
-  // Eventlistener for save buttons when user clicks 'save'.
+  // Time slot vs current date & Time. 
 
-  $(".saveButton").on("click", function(saveBtn) {
-    var calendarItem =
-      saveBtn.target.parentElement.previousElementSibling.children[0].value;
-      localStorage.setItem(saveBtn.target.attributes[0].value, calendarItem);
+  $(".time").each(function (){
+    var timeNow = $(this).attr("id").split("-")[1]
+
+    if(timeNow == timeBlock){
+      $(this).addClass("present");
+      $(this).children(".planner-item").addClass("text");
+
+    } else if (timeBlock < timeNow){
+      $(this).removeClass("present");
+      $(this).addClass("past");
+    }
+    else if (timeBlock > timeNow){
+      $(this).removeClass("present");
+      $(this).addClass("future");
+    }
+
+;})
 
 
-  // Commit to local storage
-    localStorage.setItem(saveBtn.target.attributes[0].value, calendarItem);
-  });
-
-// FOR loops OR IF statement ??? 
-
-
-$(document).ready(function(){
-
-  if(localStorage["9AM"] !== null && localStorage !== undefined)
-  var nineAM = $("<p>" + localStorage["9AM"] + "</p>");
-  $("nineAM").append(nineAM[0].text);
-}
-
-else {
-  ("No Task for Today");
-})
 
