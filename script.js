@@ -29,40 +29,12 @@
 
 
 
-// jQuery Selectors:
+// Selectors:
 var clearBtn = $("#clear-cal");
 var timeBlock = $(".time");
 var textArea = $(".planner-item");
 var saveBtn = $(".btn-secondary");
 
-
-// // Moment JS declarations (hour):
-// var now = parseInt(moment).format("HH");
-// var timeBlock = $(".hour");
-
-
-
-// // // Function for past present and future timeblock:
-
-// $.each(timeBlock, function (i, time) {
-//     var timeId = parseInt($(this).attr("id"));
-//     if (timeId === now) {
-//       $(this).next().addClass("present"); 
-//     } else if (timeId > now) {
-//       $(this).next().addClass("future");
-//     } else if (timeId < now) {
-//         $(this).next().addClass("past");
-//   }});
-//  
-//   // 
-//   $(window).load(function () {
-//     if (localStorage["9am"] !== null && localStorage["9am"] !== undefined) {
-//       var nineAm = $("<p>" + localStorage.setItem["planner-item"] + "</p>");
-//       $("#nineAm").append(nineAm[0].innerText);
-//     } else {
-//       ("");
-//     }
-//   });
 
 //MOMENT JS for current date & time
 $(document).ready(function(){
@@ -71,13 +43,6 @@ $(document).ready(function(){
   displayDate.innerHTML = timeBlock;
   var currentHour = moment().format("HH");
 })
-
-// Event listener to clear contents of schedule:
-  $(".clear-CalBtn").click(function(event) {
-    event.preventDefault;
-    $("text-area").val("");
-    localStorage.clear();
-  });
 
   // Calendar time slot compared with current date & Time. 
 
@@ -96,13 +61,9 @@ $(document).ready(function(){
       $(this).removeClass("present");
       $(this).addClass("future");
     }
-
 ;})
 
  // Eventlistener for save buttons when user clicks 'save'.
-
-  // $(".btn-secondary").on("click", function(saveBtn) {
-    
 
   $(".btn-secondary").click(function(event){
     event.preventDefault();
@@ -110,6 +71,13 @@ $(document).ready(function(){
       saveBtn.target.parentElement.previousElementSibling.children[0].value;
       // Commit to local storage
       localStorage.setItem(saveBtn.target.attributes[0].value, textArea);
+  });
+
+  // Event listener to clear contents of schedule:
+  $(".clear-CalBtn").click(function(event) {
+    event.preventDefault;
+    $("text-area").val("");
+    localStorage.clear();
   });
     
 
