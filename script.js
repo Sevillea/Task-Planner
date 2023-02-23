@@ -30,38 +30,39 @@
 
 
 // Selectors:
-var clearBtn = $("#clear-cal");
-var timeBlock = $(".time");
-var textArea = $(".planner-item");
-var saveBtn = $(".btn-secondary");
+const clearBtn = $("#clear-cal");
+const timeBlock = $(".time");
+const textArea = $(".planner-item");
+const saveBtn = $(".btn-secondary");
 
 
 //MOMENT JS for current date & time
-$(document).ready(function(){
-  var timeNow = moment().format("MMMM Do YYYY");
-  var displayDate = document.getElementById("currentDay");
+
+$(document).ready() function(){
+  let timeNow = moment().format("MMMM Do YYYY");
+  let displayDate = document.getElementById("#currentDay");
   displayDate.innerHTML = timeBlock;
-  var currentHour = moment().format("HH");
-})
+  let currentHour = moment().format("HH");
+}
 
   // Calendar time slot compared with current date & Time. 
 
   $(".time").each(function (){
-    var timeNow = $(this).attr("id").split("-")[1]
+    let timeNow = $(this).attr("id").split("-")[1]
 
     if(timeNow == timeBlock){
-      $(this).addClass("present");
+      $(this).addClass(".present");
       $(this).children(".planner-item").addClass("text");
 
     } else if (timeBlock < timeNow){
-      $(this).removeClass("present");
-      $(this).addClass("past");
+      $(this).removeClass(".present");
+      $(this).addClass(".past");
     }
     else if (timeBlock > timeNow){
-      $(this).removeClass("present");
-      $(this).addClass("future");
+      $(this).removeClass(".present");
+      $(this).addClass(".future");
     }
-;})
+;});
 
  // Eventlistener for save buttons when user clicks 'save'.
 
@@ -77,7 +78,7 @@ $(document).ready(function(){
   $(".clear-CalBtn").click(function(event) {
     event.preventDefault;
     $("text-area").val("");
-    localStorage.clear();
+    localStorage.clear(event);
   });
     
 
