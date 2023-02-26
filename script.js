@@ -38,12 +38,12 @@ const saveBtn = $(".btn-secondary");
 
 //MOMENT JS for current date & time
 
-$(document).ready() function(){
+$(document).ready(function (){
   let timeNow = moment().format("MMMM Do YYYY");
   let displayDate = document.getElementById("#currentDay");
-  displayDate.innerHTML = timeBlock;
+  displayDate.innerHTML = timeNow;
   let currentHour = moment().format("HH");
-}
+})
 
   // Calendar time slot compared with current date & Time. 
 
@@ -75,9 +75,9 @@ $(document).ready() function(){
   });
 
   // Event listener to clear contents of schedule:
-  $(".clear-CalBtn").click(function(event) {
+  $(".clear-cal").click(function(event) {
     event.preventDefault;
-    $("text-area").val("");
+    $(".clear-cal").val("");
     localStorage.clear(event);
   });
     
