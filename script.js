@@ -66,7 +66,7 @@ $(document).ready(function (){
 
  // Eventlistener for save buttons when user clicks 'save'.
 
-  $(".btn-secondary").click(function(event){
+  $(saveBtn).click(function(event){
     event.preventDefault();
     var calendarItem =
       saveBtn.target.parentElement.previousElementSibling.children[0].value;
@@ -75,11 +75,14 @@ $(document).ready(function (){
   });
 
   // Event listener to clear contents of schedule:
-  $(".clear-cal").click(function(event) {
-    event.preventDefault;
-    $(".clear-cal").val("");
-    localStorage.clear(event);
-  });
-    
+  // $(".clear-cal").click(function(event) {
+  //   event.preventDefault;
+  //   $(".clear-cal").val("");
+  //   localStorage.clear(event);
+  // });
+  
+  function ClearFields() {
+    document.getElementsById("planner-item").value = "";
+  }
 
 
