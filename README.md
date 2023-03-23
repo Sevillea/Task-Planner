@@ -8,11 +8,15 @@ The user inputs tasks into the text field according to the time, and clicks save
 
 The user is able to see the current time and hour of that day at the top of the screen. Using moment.js, this updates in real time. 
 
+The app is responsive screen size changes
+
 IMAGE OF APP:
 
 ![Screenshot 2023-03-23 at 14 52 15](https://user-images.githubusercontent.com/109441410/227241443-346bc186-b6bc-49ea-a5ae-1e95402337c8.png) 
 
-lINK TO APP: 
+LINK TO APP: 
+
+https://sevillea.github.io/Task-Planner/ 
 
 
 Credits:
