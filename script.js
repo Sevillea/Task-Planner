@@ -29,14 +29,13 @@
 
 
 
-// Selectors:
-const clearBtn = $("#clear-cal");
-const timeBlock = $(".time");
-const textArea = $(".planner-item");
-const saveBtn = $(".btn-secondary");
+//current date & time at top of page. 
+var currentTime = moment().format("MMMM Do YYYY");
+$("#currentDay").text(currentTime);
 
+var timeBlock = $(".hour");
+var now = parseInt(moment().format("H"));
 
-//MOMENT JS for current date & time
 
 $(document).ready(function (){
   let timeNow = moment().format("MMMM Do YYYY");
@@ -80,9 +79,19 @@ $(document).ready(function (){
   });
 
 
-  
+  // Clear input fields on click.
   function ClearFields() {
     document.getElementsById("planner-item").value = "";
   }
+
+  // Commit schedule entries to local storage
+  $(document).ready(function () {
+    if (localStorage["9am"] !== null && localStorage["9am"] !== undefined) {
+      var nineAm = $("<p>" + localStorage["9am"] + "</p>");
+      $("#nineAm").append(nineAm[0].innerText);
+    } else {
+      ("");
+    }
+  });
 
 

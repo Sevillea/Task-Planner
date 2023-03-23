@@ -48,17 +48,17 @@ textarea {
 /* Past, present, future */
 .past {
   background-color: #d3d3d3;
-  color: grey;
+  color: red;
 }
 
 .present {
   background-color: #ff6961;
-  color: red;
+  color: green;
 }
 
 .future {
   background-color: #77dd77;
-  color: green;
+  color: blue;
 }
 
 /* save button  */
@@ -69,7 +69,7 @@ textarea {
   border-bottom-right-radius: 15px;
   background-color: #06aed5;
   color: white;
-  border: solid black;
+  border: solid grey;
   
 }
 
@@ -101,6 +101,7 @@ textarea {
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  width: 100px;
-  height: 30px;
+  /* width: 100px;
+  height: 30px; */
+  padding: 10px;
 }
