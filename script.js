@@ -68,7 +68,23 @@ $(document).ready(function (){
     }
 ;});
 
- // Eventlistener for save buttons when user clicks 'save'.
+ 
+  // Clear input fields on click.
+
+  function ClearFields() {
+    document.getElementsById("planner-item").value = "";
+  }
+  
+
+  function add_local(){
+    window.localStorage["planner-item"] = document.getElementsByClassName("planner-item").value;
+  }
+
+  function show_local(){
+    document.getElementsByClassName("planner-item").value = window.localStorage["planner-item"];
+  }
+
+  // Eventlistener for save buttons when user clicks 'save'.
 
   $(saveBtn).click(function(event){
     event.preventDefault();
@@ -76,22 +92,67 @@ $(document).ready(function (){
       saveBtn.target.parentElement.previousElementSibling.children[0].value;
       // Commit to local storage
       localStorage.setItem(saveBtn.target.attributes[0].value, textArea);
-  });
+  },
+  console.log(calendarItem)
+  );
 
-
-  // Clear input fields on click.
-  function ClearFields() {
-    document.getElementsById("planner-item").value = "";
-  }
-
-  // Commit schedule entries to local storage
   $(document).ready(function () {
-    if (localStorage["9am"] !== null && localStorage["9am"] !== undefined) {
-      var nineAm = $("<p>" + localStorage["9am"] + "</p>");
-      $("#nineAm").append(nineAm[0].innerText);
-    } else {
-      ("");
-    }
-  });
+  if (localStorage["9AM"] !== null && localStorage["9AM"] !== undefined) {
+    var nineAm = $("<p>" + localStorage["9am"] + "</p>");
+    $("#nineAM").append(nineAm[0].innerText);
+  } else {
+    ("");
+  }
+  if (localStorage["10AM"] !== null && localStorage["10AM"] !== undefined) {
+    var tenAm = $("<p>" + localStorage["10am"] + "</p>");
+    $("#tenAM").append(tenAm[0].innerText);
+  } else {
+    ("");
+  }
+  if (localStorage["11AM"] !== null && localStorage["11AM"] !== undefined) {
+    var elevenAm = $("<p>" + localStorage["11am"] + "</p>");
+    $("#elevenAM").append(elevenAm[0].innerText);
+  } else {
+    ("");
+  }
+  if (localStorage["12AM"] !== null && localStorage["12PM"] !== undefined) {
+    var twelvePm = $("<p>" + localStorage["12pm"] + "</p>");
+    $("#twelvePM").append(twelvePm[0].innerText);
+  } else {
+    ("");
+  }
+  if (localStorage["1AM"] !== null && localStorage["1PM"] !== undefined) {
+    var onePm = $("<p>" + localStorage["1pm"] + "</p>");
+    $("#onePM").append(onePm[0].innerText);
+  } else {
+    ("");
+  }
+  if (localStorage["2PM"] !== null && localStorage["2pm"] !== undefined) {
+    var twoPm = $("<p>" + localStorage["2pm"] + "</p>");
+    $("#twoPM").append(twoPm[0].innerText);
+  } else {
+    ("");
+  }
+  if (localStorage["3PM"] !== null && localStorage["3PM"] !== undefined) {
+    var threePm = $("<p>" + localStorage["3pm"] + "</p>");
+    $("#threePM").append(threePm[0].innerText);
+  } else {
+    ("");
+  }
+  if (localStorage["4PM"] !== null && localStorage["4PM"] !== undefined) {
+    var fourPm = $("<p>" + localStorage["4pm"] + "</p>");
+    $("#fourPM").append(fourPm[0].innerText);
+  } else {
+    ("");
+  }
+  if (localStorage["5PM"] !== null && localStorage["5PM"] !== undefined) {
+    var fivePm = $("<p>" + localStorage["5pm"] + "</p>");
+    $("#fivePm").append(fivePm[0].innerText);
+  } else {
+    ("");
+  }
+});
+
+
 
 
