@@ -43,7 +43,12 @@ $(document).ready(function (){
   let displayDate = document.getElementById("#currentDay");
   displayDate.innerHTML = timeNow;
   let currentHour = moment().format("HH");
+
+  console.log(currentHour);
+  console.log(timeNow);
+  console.log(displayDate);
 })
+
 
   // Calendar time slot compared with current date & Time. 
 
@@ -74,12 +79,7 @@ $(document).ready(function (){
       localStorage.setItem(saveBtn.target.attributes[0].value, textArea);
   });
 
-  // Event listener to clear contents of schedule:
-  // $(".clear-cal").click(function(event) {
-  //   event.preventDefault;
-  //   $(".clear-cal").val("");
-  //   localStorage.clear(event);
-  // });
+
   
   function ClearFields() {
     document.getElementsById("planner-item").value = "";
