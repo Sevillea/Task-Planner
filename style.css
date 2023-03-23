@@ -64,7 +64,7 @@ textarea {
 
 /* save button  */
 
-.saveBtn, .col-2 {
+.saveBtn  {
   border-radius: 15px;
   background-color: #06aed5;
   color: white;
@@ -83,7 +83,6 @@ textarea {
   border: none;
   border-radius: 8px;
   color: white;
-  padding: 9px 30px;
   text-align: center;
   text-decoration: none;
   padding:10px;
