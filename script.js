@@ -85,13 +85,25 @@ $(document).ready(function (){
   }
 
   // Commit schedule entries to local storage
-  $(document).ready(function () {
-    if (localStorage["9am"] !== null && localStorage["9am"] !== undefined) {
-      var nineAm = $("<p>" + localStorage["9am"] + "</p>");
-      $("#nineAm").append(nineAm[0].innerText);
-    } else {
-      ("");
-    }
-  });
+  // $(document).ready(function () {
+  //   if (localStorage["9am"] !== null && localStorage["9am"] !== undefined) {
+  //     var nineAm = $("<p>" + localStorage["9am"] + "</p>");
+  //     $("#nineAM").append(nineAm[0].innerText);
+  //   } else {
+  //     ("");
+  //   }
+  // });
+
+  function add_local(){
+    window.localStorage["planner-item"] = document.getElementsByClassName("planner-item").value;
+  }
+
+  function show_local(){
+    document.getElementsByClassName("planner-item").value = window.localStorage["planner-item"];
+  }
+
+  $(btn-secondary).click(function){
+    console.log(add_local);
+  }
 
 
