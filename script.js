@@ -30,11 +30,15 @@
 
 
 //current date & time at top of page. 
-var currentTime = moment().format("MMMM Do YYYY");
+var currentTime = moment().format("MMMM [the] Do [,] YYYY");
 $("#currentDay").text(currentTime);
 
+
 var timeBlock = $(".hour");
-var now = parseInt(moment().format("H"));
+// var now = parseInt(moment().format("H MM SS"));
+var now = parseInt(moment().format('HH do [hrs]'));
+$(".timeNow").text(now);
+console.log(now);
 
 
 $(document).ready(function (){
