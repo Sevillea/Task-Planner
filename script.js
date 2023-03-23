@@ -97,55 +97,55 @@ $(document).ready(function (){
   );
 
   $(document).ready(function () {
-  if (localStorage["9am"] !== null && localStorage["9am"] !== undefined) {
+  if (localStorage["9AM"] !== null && localStorage["9AM"] !== undefined) {
     var nineAm = $("<p>" + localStorage["9am"] + "</p>");
-    $("#nineAm").append(nineAm[0].innerText);
+    $("#nineAM").append(nineAm[0].innerText);
   } else {
     ("");
   }
-  if (localStorage["10am"] !== null && localStorage["10am"] !== undefined) {
+  if (localStorage["10AM"] !== null && localStorage["10AM"] !== undefined) {
     var tenAm = $("<p>" + localStorage["10am"] + "</p>");
-    $("#tenAm").append(tenAm[0].innerText);
+    $("#tenAM").append(tenAm[0].innerText);
   } else {
     ("");
   }
-  if (localStorage["11am"] !== null && localStorage["11am"] !== undefined) {
+  if (localStorage["11AM"] !== null && localStorage["11AM"] !== undefined) {
     var elevenAm = $("<p>" + localStorage["11am"] + "</p>");
-    $("#elevenAm").append(elevenAm[0].innerText);
+    $("#elevenAM").append(elevenAm[0].innerText);
   } else {
     ("");
   }
-  if (localStorage["12pm"] !== null && localStorage["12pm"] !== undefined) {
+  if (localStorage["12AM"] !== null && localStorage["12PM"] !== undefined) {
     var twelvePm = $("<p>" + localStorage["12pm"] + "</p>");
-    $("#twelvePm").append(twelvePm[0].innerText);
+    $("#twelvePM").append(twelvePm[0].innerText);
   } else {
     ("");
   }
-  if (localStorage["1pm"] !== null && localStorage["1pm"] !== undefined) {
+  if (localStorage["1AM"] !== null && localStorage["1PM"] !== undefined) {
     var onePm = $("<p>" + localStorage["1pm"] + "</p>");
-    $("#onePm").append(onePm[0].innerText);
+    $("#onePM").append(onePm[0].innerText);
   } else {
     ("");
   }
-  if (localStorage["2pm"] !== null && localStorage["2pm"] !== undefined) {
+  if (localStorage["2PM"] !== null && localStorage["2pm"] !== undefined) {
     var twoPm = $("<p>" + localStorage["2pm"] + "</p>");
-    $("#twoPm").append(twoPm[0].innerText);
+    $("#twoPM").append(twoPm[0].innerText);
   } else {
     ("");
   }
-  if (localStorage["3pm"] !== null && localStorage["3pm"] !== undefined) {
+  if (localStorage["3PM"] !== null && localStorage["3PM"] !== undefined) {
     var threePm = $("<p>" + localStorage["3pm"] + "</p>");
-    $("#threePm").append(threePm[0].innerText);
+    $("#threePM").append(threePm[0].innerText);
   } else {
     ("");
   }
-  if (localStorage["4pm"] !== null && localStorage["4pm"] !== undefined) {
+  if (localStorage["4PM"] !== null && localStorage["4PM"] !== undefined) {
     var fourPm = $("<p>" + localStorage["4pm"] + "</p>");
-    $("#fourPm").append(fourPm[0].innerText);
+    $("#fourPM").append(fourPm[0].innerText);
   } else {
     ("");
   }
-  if (localStorage["5pm"] !== null && localStorage["5pm"] !== undefined) {
+  if (localStorage["5PM"] !== null && localStorage["5PM"] !== undefined) {
     var fivePm = $("<p>" + localStorage["5pm"] + "</p>");
     $("#fivePm").append(fivePm[0].innerText);
   } else {
