@@ -36,7 +36,6 @@ $("#currentDay").text(currentTime);
 
 var timeBlock = $(".hour");
 // var now = parseInt(moment().format("H MM SS"));
-var now = parseInt(moment().format('HH do [hrs]'));
 $(".timeNow").text(now);
 console.log(now);
 
@@ -50,7 +49,7 @@ $(document).ready(function (){
   console.log(currentHour);
   console.log(timeNow);
   console.log(displayDate);
-})
+});
 
 
   // Calendar time slot compared with current date & Time. 
@@ -102,37 +101,37 @@ $(document).ready(function (){
 
   $(document).ready(function () {
   if (localStorage["9AM"] !== null && localStorage["9AM"] !== undefined) {
-    var nineAm = $("<p>" + localStorage["9am"] + "</p>");
-    $("#nineAM").append(nineAm[0].innerText);
+    var nineAm = $("<p>" + localStorage["9AM"] + "</p>");
+    $("#nineAM").append(nineAM[0].innerText);
   } else {
     ("");
   }
   if (localStorage["10AM"] !== null && localStorage["10AM"] !== undefined) {
-    var tenAm = $("<p>" + localStorage["10am"] + "</p>");
-    $("#tenAM").append(tenAm[0].innerText);
+    var tenAm = $("<p>" + localStorage["10AM"] + "</p>");
+    $("#tenAM").append(tenAM[0].innerText);
   } else {
     ("");
   }
   if (localStorage["11AM"] !== null && localStorage["11AM"] !== undefined) {
-    var elevenAm = $("<p>" + localStorage["11am"] + "</p>");
-    $("#elevenAM").append(elevenAm[0].innerText);
+    var elevenAm = $("<p>" + localStorage["11AM"] + "</p>");
+    $("#elevenAM").append(elevenAM[0].innerText);
   } else {
     ("");
   }
   if (localStorage["12AM"] !== null && localStorage["12PM"] !== undefined) {
-    var twelvePm = $("<p>" + localStorage["12pm"] + "</p>");
-    $("#twelvePM").append(twelvePm[0].innerText);
+    var twelvePm = $("<p>" + localStorage["12PM"] + "</p>");
+    $("#twelvePM").append(twelvePM[0].innerText);
   } else {
     ("");
   }
-  if (localStorage["1AM"] !== null && localStorage["1PM"] !== undefined) {
-    var onePm = $("<p>" + localStorage["1pm"] + "</p>");
+  if (localStorage["1PM"] !== null && localStorage["1PM"] !== undefined) {
+    var onePm = $("<p>" + localStorage["1PM"] + "</p>");
     $("#onePM").append(onePm[0].innerText);
   } else {
     ("");
   }
-  if (localStorage["2PM"] !== null && localStorage["2pm"] !== undefined) {
-    var twoPm = $("<p>" + localStorage["2pm"] + "</p>");
+  if (localStorage["2PM"] !== null && localStorage["2PM"] !== undefined) {
+    var twoPm = $("<p>" + localStorage["2PM"] + "</p>");
     $("#twoPM").append(twoPm[0].innerText);
   } else {
     ("");
@@ -144,14 +143,14 @@ $(document).ready(function (){
     ("");
   }
   if (localStorage["4PM"] !== null && localStorage["4PM"] !== undefined) {
-    var fourPm = $("<p>" + localStorage["4pm"] + "</p>");
+    var fourPm = $("<p>" + localStorage["4PM"] + "</p>");
     $("#fourPM").append(fourPm[0].innerText);
   } else {
     ("");
   }
   if (localStorage["5PM"] !== null && localStorage["5PM"] !== undefined) {
-    var fivePm = $("<p>" + localStorage["5pm"] + "</p>");
-    $("#fivePm").append(fivePm[0].innerText);
+    var fivePm = $("<p>" + localStorage["5PM"] + "</p>");
+    $("#fivePM").append(fivePm[0].innerText);
   } else {
     ("");
   }
